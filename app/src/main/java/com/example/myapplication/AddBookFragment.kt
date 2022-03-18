@@ -18,9 +18,6 @@ import java.lang.Exception
 
 class AddBookFragment : Fragment() {
 
-
-    val CODE_OK = 1
-
     private lateinit var binding : FragmentAddBookBinding
 
     override fun onCreateView(
@@ -28,11 +25,14 @@ class AddBookFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentAddBookBinding.inflate(inflater)
+        
         val db = Room.databaseBuilder(
             requireContext(),
             AppDatabase::class.java,
             "Peepo"
         ).allowMainThreadQueries().build()
+
+
 
         binding.AddImageButton.setOnClickListener {
             if (binding.AddImageText.text.toString().isNotEmpty()){
@@ -70,7 +70,7 @@ class AddBookFragment : Fragment() {
                     .commit()
             }
             else {
-                var dialog = AlertDialog.Builder(requireContext())
+                AlertDialog.Builder(requireContext())
                     .setMessage("Одно или несколько полей не заполнены и(или) не выбрана картинка")
                     .setPositiveButton("OK", null)
                     .create()
@@ -87,5 +87,4 @@ class AddBookFragment : Fragment() {
         }
         return binding.root
     }
-
 }

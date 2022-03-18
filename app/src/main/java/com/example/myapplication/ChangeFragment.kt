@@ -67,6 +67,13 @@ class ChangeFragment : Fragment() {
                     .show()
             }
         }
+        binding.changeBackButton.setOnClickListener {
+            requireActivity()
+                .supportFragmentManager
+                .beginTransaction()
+                .replace(R.id.container, OneBookFragment())
+                .commit()
+        }
         return binding.root
 
     }
