@@ -5,16 +5,16 @@
     android:layout_height="match_parent"
     android:id="@+id/fragment_books"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ChangeFragment">
+    tools:context=".fragments.ChangeFragment">
 
     <ImageView
         android:id="@+id/changeImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/changeBackButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/changeImageButton"
@@ -135,17 +135,6 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/changeBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:text="Назад"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

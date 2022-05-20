@@ -5,7 +5,7 @@
     android:background="#ffffe6"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".OneBookFragment">
+    tools:context=".fragments.OneBookFragment">
 
     <TextView
         android:id="@+id/titleOne"
@@ -25,17 +25,6 @@
         android:text="Автор"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/yearOne" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/oneBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:text="Назад"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/aboutOne"
@@ -61,13 +50,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:layout_marginTop="15dp"
         android:id="@+id/oneImage"
         android:layout_width="150dp"
+        android:layout_marginTop="50dp"
         android:layout_height="150dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/oneBackButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/yearOne"

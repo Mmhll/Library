@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.util
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,8 +8,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.example.myapplication.R
+import com.example.myapplication.room.BookEntity
 
-class BookRecycler(var context : Context, var data : Array<BookEntity>) : RecyclerView.Adapter<BookRecycler.VH>() {
+class BookRecycler(var context : Context, var data : MutableList<BookEntity>) : RecyclerView.Adapter<BookRecycler.VH>() {
 
     private lateinit var myListener: onItemClickListener
     private lateinit var myLongListener: onLongItemClickListener

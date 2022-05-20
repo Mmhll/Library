@@ -1,4 +1,4 @@
-package com.example.myapplication
+package com.example.myapplication.room
 
 import androidx.room.*
 
@@ -6,13 +6,11 @@ import androidx.room.*
 @Dao
 interface BookDao {
     @Query("SELECT * FROM books")
-    fun getBooks() : Array<BookEntity>
+    fun getBooks() : MutableList<BookEntity>
     @Query("SELECT * FROM books WHERE id = :bookId")
     fun getCurrentBook(bookId : Int) : BookEntity
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun putBook(book : BookEntity)
-    @Delete(entity = BookEntity::class)
-    fun deleteById(vararg id : DeleteId)
+    @Query("DELETE FROM books WHERE id = :id")
+    fun deleteById(id : Int = 1)
 }
-
-data class DeleteId(val id : Int)

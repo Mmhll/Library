@@ -10,4 +10,6 @@
         вы сможете изменить нужные вам параметры точно также, как вы добавляли
         книгу до этого</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="error">Одно или несколько полей не заполнены</string>
+    <string name="successAdded">Книга добавлена</string>
 </resources>

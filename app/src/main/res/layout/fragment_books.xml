@@ -5,7 +5,7 @@
     android:background="#ffffcc"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".BooksFragment">
+    tools:context=".fragments.BooksFragment">
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/buttonAdd"
         android:layout_width="160dp"

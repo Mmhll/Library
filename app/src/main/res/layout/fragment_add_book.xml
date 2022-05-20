@@ -6,16 +6,16 @@
     android:id="@+id/add_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddBookFragment">
+    tools:context=".fragments.AddBookFragment">
 
     <ImageView
         android:id="@+id/AddImage"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="50dp"
         android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/AddBackButton" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/AddImageButton"
@@ -136,17 +136,6 @@
         android:textAllCaps="false"
         android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/AddBackButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@drawable/button_background"
-        android:text="Назад"
-        android:textAllCaps="false"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
